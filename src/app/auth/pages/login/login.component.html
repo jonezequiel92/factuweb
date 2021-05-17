@@ -1,1 +1,24 @@
-<p>loginnnnn works!</p>
+<section class="body">
+
+  <mat-spinner *ngIf="loading" diameter=50 class="spinner" > </mat-spinner>
+
+  <div >
+    <form class="login" *ngIf="!loading"  [formGroup]='form' (ngSubmit)="ingresar()" >
+      <figure class="Login__containerImg">
+        <img src="../../../assets/img/logo.png" class="img-fluid" alt="" />
+      </figure>
+      <!-- <h1>Login</h1> -->
+      <mat-form-field class="form-input" appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input type="text" matInput formControlName='user' />
+      </mat-form-field>
+      <mat-form-field class="form-input" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" matInput formControlName='password' />
+      </mat-form-field>
+      <br>
+      <button  type="submit" mat-raised-button class="button" color="primary" [disabled]='form.invalid' >Ingresar</button>
+    </form>
+  </div>
+
+</section>

@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CompaniesRoutingModule } from './companies-routing.module';
-import { CompaniesListComponent } from './pages/companies-list/companies-list.component';
+import { SharedModule } from '../shared/shared.module';
 
+import { CompaniesListComponent } from './pages/companies-list/companies-list.component';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { CompaniesListComponent } from './pages/companies-list/companies-list.co
   ],
   imports: [
     CommonModule,
-    CompaniesRoutingModule
+    CompaniesRoutingModule,
+    SharedModule
   ]
 })
 export class CompaniesModule { }
