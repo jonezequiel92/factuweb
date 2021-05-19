@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { Menu } from 'src/app/interfaces/menu';
+import { MenuService } from '../../services/menu.service';
 
 
 
@@ -10,9 +12,18 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  menu: Menu[] = [];
+
+  constructor( private _menuService: MenuService ) { }
 
   ngOnInit(): void {
+    this.cargarMenu();
+  }
+
+  cargarMenu() {
+    this._menuService.getMenu().subscribe( data => {
+      this.menu = data
+    })
   }
 
 }

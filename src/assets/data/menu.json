@@ -1,0 +1,15 @@
+[
+  {
+    "nombre"  :  "Empresas",
+    "redirect":  "/companies"
+  },
+  {
+    "nombre"  :  "Productos",
+    "redirect":  "/products"
+  },
+  {
+    "nombre"  :  "Comprobantes",
+    "redirect":  "/invoices"
+  }
+
+]

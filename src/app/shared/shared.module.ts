@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 // Módulos
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedRoutingModule } from './shared-routing.module';
 
 //Angular Material
 import {MatSliderModule} from '@angular/material/slider';
@@ -13,7 +15,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { SharedRoutingModule } from './shared-routing.module';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+
 
 
 //Componentes
@@ -34,7 +40,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   exports: [
@@ -47,7 +58,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatProgressSpinnerModule,
     MatToolbarModule,
     NavbarComponent,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class SharedModule { }

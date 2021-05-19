@@ -2,9 +2,9 @@
     <span>Factuweb App</span>
 
     <span class="example-spacer"></span>
-    <button mat-button routerLink="/companies">Empresas</button>
-    <button mat-button routerLink="/products">Productos</button>
-    <button mat-button routerLink="/invoices">Comprobantes</button>
+    <button mat-button *ngFor="let item of menu"  [routerLink]="item.redirect" routerLinkActive>{{item.nombre}}</button>
+    <!-- <button mat-button routerLink="/products">Productos</button>
+    <button mat-button routerLink="/invoices">Comprobantes</button> -->
     <span class="example-spacer"></span>
     <button mat-icon-button routerLink="/login" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>logout</mat-icon>
